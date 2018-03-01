@@ -46,9 +46,11 @@ def submitSurvey():
         surveyResponse['color'] = request.form['color']
         surveyResponse['fe-after'] = request.form['feAfter']
 
+    if surveyResponse['fe-after'] >= surveyResponse['fe-before']:
+        return render_template('results.html', surveyResponse=surveyResponse)# pass in variables to the template
+    else:
+        return render_template('bad_results.html', surveyResponse=surveyResponse)# pass in variables to the template
 
-
-    return render_template('results.html', surveyResponse=surveyResponse)# pass in variables to the template
     # return render_template('results.html', surveyResponse=surveyResponse)# pass in variables to the template
     # try:
 
