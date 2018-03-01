@@ -6,20 +6,7 @@ $('#submit-survey').on('click', function submitSurvey() {
 	var feAfter = $("input[name=front-end-after]").val();
 	
 	var don = {'color':color,'food':food,'vacation':vacation,'feBefore':feBefore,'feAfter':feAfter};
-	alert(don['color']);
-	alert('vov');
-	// alert('here');
-
-
-	// $.ajax({
- //        type : "POST",
- //        url : "/submit-survey",
- //        data: JSON.stringify(color),
- //        contentType: 'application/json;charset=UTF-8',
- //        success: function(data) {
- //            console.log('data');
- //        }
- //    	});
+	
 
  	$.post("submit-survey", {
  					color:color,
@@ -36,67 +23,7 @@ $('#submit-survey').on('click', function submitSurvey() {
         );
 
 
- 	
-	// $.ajax({
- //  		type: "POST",
- //  		contentType: "application/json; charset=utf-8",
- //  		url: "/submit-survey",
- //  		data: {color: 'hallo', vacation: 'test'},
- //  		success: function (data) {
- //    	console.log(data.color);
- //    	console.log(data.vacation);
- //  		}
-	// 	});
-		
-	// $.ajax({
- //  		type : 'POST',
- //  		url : "/submit-survey",
- //  		contentType: 'application/json;charset=UTF-8',
- //  		data : {'data':don}
-	// 	},function(data){
-	// 		$(document.body.parentNode).html(data);
-	// 	});
- 		
-
-
-// KINDA WORKS
- // 	$.post( "/submit-survey", function( data ) {
- //  			$(document).body().parentNode().html(data);
- //  			alert(data);
- //  			// $( ".result" ).html( data );
-	// },'json');
-	
-
-
-	// $.post('/submit-survey', data 
-	// 						// 'food':food,
-	// 						// 'vacation':vacation,
-	// 						// 'color':color,
-	// 						// 'feBefore':feBefore,
-	// 						// 'feAfter':feAfter
-	// 					,
-	// 		function(data){
-				
-	// 			alert(data);
-	// 			$(document).body().parentNode().html(data);
-	// 			alert('bpb')
-				
-
-	// 		}, 'json'
-
-	// 		);
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 $("#site-title-wrapper").on('click', function goHome() {

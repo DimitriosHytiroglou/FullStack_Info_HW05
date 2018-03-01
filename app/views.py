@@ -34,8 +34,8 @@ def logout():
 @app.route('/submit-survey', methods=['POST'])
 def submitSurvey():
     
-    username = ''
-    email = ''
+    # username = ''
+    # email = ''
 
     if request.method == "POST":
 
